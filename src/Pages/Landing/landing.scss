@@ -1,0 +1,548 @@
+/* landing.scss */
+
+#Landing {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .Landing-header {
+    position: relative;
+    width: 100%;
+    height: 120vh;
+    background-image: url('/images/visa2.jpg');
+    background-size: cover;
+    background-position: 60% center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: 1;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+  }
+
+  .header-content {
+    position: relative;
+    top: 15%;
+    z-index: 3;
+    text-align: left;
+    color: white;
+    padding: 0 65px;
+    margin-top: 70px;
+
+    .hbox {
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      /* Adjusted font size */
+      font-family: 'Poppins', sans-serif;
+      letter-spacing: 0.2rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      color: yellow;
+      margin-bottom: 0.5rem;
+      /* Adjusted margin */
+    }
+
+    .pbox {
+      p {
+        font-size: 4rem;
+        font-weight: bold;
+        /* Adjusted font size */
+        margin-bottom: 10px;
+        /* Space between text and images */
+      }
+
+      .image-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        /* Space between images and text */
+        flex-wrap: wrap;
+
+        .location {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin: 0 90px;
+          /* Adjust spacing around each location */
+
+          .flag {
+            padding-left: 100px;
+            width: 180px;
+            /* Adjusted size for the flag images */
+            height: auto;
+            margin-bottom: 100px;
+            /* Space between image and text */
+          }
+
+          .flag2 {
+            position: relative;
+            top: 60px;
+            right: 150px;
+            width: 180px;
+            /* Adjusted size for the flag images */
+            height: auto;
+
+          }
+
+          .flag3 {
+            position: relative;
+            top: 60px;
+            left: 40px;
+            width: 300px;
+            height: auto;
+
+          }
+
+          .flag4 {
+            position: relative;
+            top: 230px;
+            right: 170px;
+            width: 400px;
+            height: auto;
+
+          }
+        }
+      }
+
+    }
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      top: 20px;
+
+      p {
+        position: relative;
+        top: 20px;
+        font-size: 4rem;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .horizontal-containers {
+    position: relative;
+    display: flex;
+    left: 210px;
+    justify-content: space-between;
+    width: 70%;
+    margin-top: -35px;
+    z-index: 2;
+
+    .container1,
+    .container2,
+    .container3 {
+      flex: 1;
+      margin: 0 20px;
+      /* Adjusted margin for spacing */
+      padding: 8px;
+      color: rgb(1, 53, 1);
+      background-color: white;
+      box-shadow: 0 9px 7px rgba(0, 0, 0, 0.3);
+      text-align: left;
+      border-radius: 10px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        animation: bounceHover 0.6s ease;
+        /* Trigger bounce on hover */
+      }
+
+      img.six {
+        max-width: 20%;
+        height: auto;
+        margin-right: 10px;
+        /* Space between image and text */
+      }
+
+      img.student {
+        max-width: 25%;
+        height: auto;
+        margin-right: 10px;
+      }
+
+      img.success {
+        max-width: 35%;
+        height: auto;
+        margin-right: 10px;
+      }
+
+      .text-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        h2 {
+          font-size: 1rem;
+          /* Adjusted font size */
+          margin: 0;
+          padding-bottom: 5px;
+        }
+
+        p {
+          font-size: 0.8rem;
+          /* Adjusted font size */
+          margin: 0;
+        }
+      }
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @keyframes bounceHover {
+    0% {
+      transform: translateY(0);
+    }
+
+    30% {
+      transform: translateY(-10px);
+      /* Moves up slightly */
+    }
+
+    50% {
+      transform: translateY(5px);
+      /* Moves down slightly */
+    }
+
+    100% {
+      transform: translateY(0);
+      /* Returns to original position */
+    }
+  }
+
+  .content-section {
+
+    padding: 80px;
+    height: 440px;
+    background-color: #fff;
+    color: #333;
+
+    h2 {
+      color: #046a58;
+      font-size: 3.3rem;
+      margin-bottom: 20px;
+
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .red {
+      display: flex;
+      flex-direction: row;
+      padding-top: 20px;
+
+      .get {
+        padding: 20px;
+        background: rgba(1, 25, 41, 0.9);
+        color: white;
+        font-weight: bold;
+        border-radius: 4px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+
+        font-size: 0.9rem;
+        border: none;
+      }
+
+      .push {
+        padding: 20px 30px 20px 30px;
+        background: rgba(1, 25, 41, 0.9);
+        color: white;
+        font-weight: bold;
+        border-radius: 4px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        margin-left: 40px;
+        font-size: 0.9rem;
+        border: none;
+
+
+      }
+    }
+
+    .circle-container {
+      position: absolute;
+      /* Allow positioning relative to the parent */
+      right: 190px;
+      /* Position the container at the right end */
+      top: 79%;
+      /* Adjusted vertical position */
+      transform: translateY(-50%);
+      /* Offset to perfectly center vertically */
+      display: flex;
+      justify-content: center;
+      /* Align circles horizontally */
+      align-items: center;
+
+      /* Ensure text inside circles is centered */
+      text-align: center;
+
+      /* Circle Styles */
+      .circle1,
+      .circle2,
+      .circle3 {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        border: 4px solid white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 -30px;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(12, 12, 12, 0.384);
+          z-index: 0;
+          opacity: 0;
+          transition: opacity 0.5s ease;
+
+        }
+
+        &.active::before {
+          opacity: 1;
+        }
+
+        .play-icon {
+          position: absolute;
+          font-size: 3rem;
+          color: rgb(3, 65, 3);
+          z-index: 1;
+          display: none;
+        }
+
+        &.active .play-icon {
+          display: block;
+        }
+
+
+
+      }
+
+      .circle.active {
+        width: 300px;
+        height: 300px;
+        border: 4px solid rgb(3, 65, 3);
+        z-index: 2;
+      }
+
+      .circle.small {
+        width: 200px;
+        height: 200px;
+        z-index: 0;
+      }
+
+
+      /* Circle 1 (Top Circle) */
+      .circle1 {
+        position: relative;
+        left: 190px;
+        background-image: url('/images/visa2.jpg');
+        /* Replace with the actual image path */
+      }
+
+      /* Circle 2 (Behind Circle 1) */
+      .circle2 {
+        position: relative;
+        top: 80px;
+        left: 120px;
+        background-image: url('/images/visa2.jpg');
+        /* Replace with the actual image path */
+      }
+
+      .circle3 {
+        position: relative;
+        bottom: 20px;
+        left: 20px;
+        background-image: url('/images/visa2.jpg');
+        /* Replace with the actual image path */
+      }
+    }
+
+  }
+
+  .service-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 60px;
+
+    h3 {
+      color: #046a58;
+      font-size: 3.7rem;
+      position: relative;
+      /* Required for positioning the underline */
+
+      &::after {
+        content: '';
+        /* Empty content for the underline */
+        display: block;
+        width: 280px;
+        height: 4px;
+        background-color: #046a58;
+        margin: 8px auto 0;
+        position: absolute;
+        border-radius: 4px;
+        left: 50%;
+        transform: translateX(-50%);
+
+
+      }
+    }
+    .whole-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      gap: 30px;
+    
+      .first-container,
+      .second-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 25px;
+        .service1, .service3, .service5{
+          background: #f1c50e26;
+        }
+        
+        .service1,
+        .service2,
+        .service3,
+        .service4,
+        .service5,
+        .service6 {
+          width: 400px;
+          height: 250px;
+          border: 1px solid #f1c50e57;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          position: relative;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          flex: 1;
+          border-radius: 10px;
+         
+          
+        
+          
+          &.expanded {
+            width: 80%;
+            height: 300px; /* Adjust as needed */
+            background: rgba(1, 25, 41, 0.9);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            
+            .expanded-content,
+            .expanded-second {
+              margin-top: 3px;
+              
+              ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                li {
+                  padding-left: 3px;
+                  margin: 7px 0;
+                  color: white;
+                  font-size: 1rem;
+                  text-align: left;
+                }
+              }
+            }
+            
+            p {
+              margin-bottom: 2px; /* Adjust the bottom margin */
+              font-size: 1.3rem;
+              font-weight: bold;
+              color: white;
+              text-align: center;
+            }
+          }
+          
+          &.expanded .service-icon, &.expanded .service-second ,&.expanded .arrow-icon ,
+          &.expanded h1 {
+            display: none;
+          }
+    
+          .service-icon,
+          .service-second {
+            padding-top: 40px;
+            font-size: 3rem;
+            color: #046a58;
+          }
+    
+          h1 {
+            color: #333;
+            font-size: 1.3rem;
+            font-weight: bold;
+          }
+    
+          p {
+            position: relative;
+            bottom: 20px;
+            color: #333;
+            font-size: 1.3rem;
+            font-weight: bold;
+          }
+        }
+      }
+    
+      .arrow-icon {
+        position: relative;
+        right: 0;
+        top: 33%;
+        transform: translateY(-50%);
+        font-size: 1.2rem; /* Adjust size as needed */
+        color: #333; /* Adjust color as needed */
+        transition: transform 0.3s ease;
+      }
+    
+      /* Animation for arrow icon on hover */
+     
+    }
+  }}    

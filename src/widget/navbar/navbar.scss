@@ -1,0 +1,269 @@
+
+.navbar {
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(1, 25, 41, 0.9) ;
+  transition: top 0.3s ease-in-out;
+
+  
+
+  &.hidden {
+    top: -145px; 
+  }
+
+  &.visible {
+    top: 0;
+  }
+
+}
+
+
+
+.navbar-main {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  align-items: center;
+ 
+  justify-content: space-between;
+  padding: 30px 20px;
+  overflow: hidden; 
+}
+.menu-icon {
+  position:fixed;
+  font-size: 1.5rem;
+  cursor: pointer;
+color: white;
+  transition: transform 0.3s ease;
+  display: none; 
+  left: 20px;
+  top: 65px;
+}
+.menu-icon.open {
+  transform: rotate(90deg); 
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  position: fixed;
+ 
+  left:50px;
+
+  img {
+   
+  
+    max-width: 300px; 
+    height: auto;    
+  }
+}
+
+.navbar-links {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding-top: 15px;
+  padding-right: 40px;
+  list-style: none;
+  position: fixed;
+  right: 220px;
+
+  li {
+    margin: 0 15px;
+
+    a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.2rem;
+      position: relative;
+      display: inline-block;
+      font-family: 'Poppins', sans-serif;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 3px;
+      
+        border-radius: 4px;
+        background-color: #05947a;
+        transition: width 0.3s ease;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+      &:hover {
+        color: #05947a; 
+      }
+    }
+  }
+}
+.bar {
+  position: fixed;
+  right: 230px;  
+  font-size: 1.2rem; 
+padding-top: 12px;
+  
+  color: rgba(255, 255, 255, 0.404);
+  @media (max-width: 1000px) {
+    display: none;
+  }
+   
+}
+.notification-icon {
+  position:fixed;
+  right: 165px;
+ padding-top: 12px;
+  font-size: 1.5rem; 
+  cursor: pointer;
+  color: white;
+  
+ 
+  &:hover {
+    color: #05947a; 
+  }
+
+  @media (max-width: 700px) {
+    display: none;
+  }
+}
+.join-button {
+  background-color: #046a58 ;
+  color: white;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+ position: fixed;
+ right: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+ 
+
+  &:hover {
+    background-color: #05947a;
+  }
+ 
+}
+.sidebar {
+  position: fixed;
+  top: 143px; // Positioned directly below the navbar
+  left: 0;
+  width: 200px;
+  background: rgba(1, 25, 41, 0.9);
+  color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  height: calc(100vh - 123px); // Make the sidebar fill the remaining screen height
+  overflow-y: auto; // Add scroll if the content overflows
+  transition: transform 0.3s ease;
+  transform: translateY(0);
+  display: none; 
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 20px 0;
+  position: relative;
+}
+
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  display: inline-block;
+  padding: 5px 0; 
+  transition: color 0.3s ease;
+}
+.sidebar a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  border-radius: 4px;
+  height: 3px; /* Height of the bar */
+  background-color: #05947a; /* Color of the bar */
+  transition: width 0.3s ease;
+}
+
+.sidebar a:hover {
+  color: #05947a; /* Change the text color on hover */
+}
+
+.sidebar a:hover::before {
+  width: 100%; /* Expand the bar to full width on hover */
+}
+.sidebar-footer {
+  margin-top: auto; 
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2); /* Adds a line above the icons */
+}
+
+.sidebar-footer a {
+  color: #fff;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.sidebar-footer a:hover {
+  color: #05947a; /* Change color on hover */
+}
+
+@media (max-width: 950px) {
+  .navbar-main {
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: center;
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  .navbar-logo {
+position: fixed;
+top: 45px;
+   
+  }
+  .notification-icon{
+  
+    position: fixed;
+    top: 55px;
+  }
+ 
+
+  .navbar-links {
+    display: none; 
+  }
+    .menu-icon {
+      display: block; 
+    }
+    .sidebar {
+      display: block;
+      top: 123px; 
+      height: calc(100vh - 90px); 
+    }
+  }
+  
+@media (min-width: 950px) {
+  .navbar-links {
+    display: flex; 
+  }
+
+  .sidebar {
+    display: none; 
+  }
+}
+  
