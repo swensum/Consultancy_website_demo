@@ -1,0 +1,192 @@
+.mission-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%; 
+  min-height: auto; 
+  padding:  20px 0;
+  background: rgb(226, 241, 230); 
+  opacity: 0; // Initial state
+  transition: opacity 2s ease;
+ 
+
+  &.fade-in {
+    opacity: 1;
+  }
+
+
+  .mission-left {
+    position: relative;
+    width: 120%;
+    
+    h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      color: #062f2b;
+      font-size: calc(1.7vw + 2rem);
+      width: 90%;
+      padding-left: 50px;
+      opacity: 0; // Initial state
+      transform: translateY(-100%); // Slide in from below
+      transition: opacity 0.5s ease, transform 1.5s ease; // Transition for both properties
+  
+      &.fade-in {
+        opacity: 1; // Fade in
+        transform: translateY(0); // Move to original position
+      }
+
+    }
+
+    .mission-text {
+      position: relative;
+      bottom: 20px;
+      background-color: #062f2b;
+      width: 60%;
+      max-width: 210px;
+      height: 50px;
+      border-top-right-radius: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 0;
+      margin-right: 90%;
+      span {
+        font-size: calc(1.2vw + 0.5rem);
+        font-family: 'Space Grotesk', sans-serif;
+        color: white;
+        opacity: 0; // Initial state
+        transform: translateY(-100%); // Slide in from below
+        transition: opacity 0.5s ease, transform 1.5s ease; // Transition for both properties
+    
+        &.fade-in {
+          opacity: 1; // Fade in
+          transform: translateY(0); // Move to original position
+        }
+  
+      }
+    }
+  
+      
+
+    .first-part, .second-part, .third-part {
+      padding:20px 0 0 140px;
+      display: flex;
+      flex-direction: row;
+     margin: 0;
+     position: relative;
+     bottom: 20px;
+      gap: 30px;
+      transition: transform 0.3s ease;
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      .icon-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #062f2b;
+        position: relative;
+        min-width: 20%;
+        max-height: 80px;
+        font-size: calc(1.2vw + 1.5rem);
+        color: white;
+      }
+
+      .text-container {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        bottom: 5px;
+        gap: 10px;
+        .head {
+          position: relative;
+          background-color: #062f2b;
+          width: 80%;
+          max-width: 140px;
+          height: 30px;
+          border-top-right-radius: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-left: 0;
+          margin-right: 90%;
+          margin-bottom: 20px;
+          h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            color: white;
+            font-size: 1.7rem;
+            opacity: 0; // Initial state
+            transform: translateY(-100%); // Slide in from below
+            transition: opacity 0.5s ease, transform 1.5s ease; // Transition for both properties
+        
+            &.fade-in {
+              opacity: 1; // Fade in
+              transform: translateY(0); // Move to original position
+            }
+      
+          }
+        }
+
+        p {
+          position: relative;
+          bottom: 40px;
+          font-size: calc(0.7vw + 0.5rem);
+          font-family: 'Space Grotesk', sans-serif;
+          color: #062f2b;
+          opacity: 0; // Initial state
+          transform: translateY(-100%); // Slide in from below
+          transition: opacity 0.5s ease, transform 1.5s ease; // Transition for both properties
+      
+          &.fade-in {
+            opacity: 1; // Fade in
+            transform: translateY(0); // Move to original position
+          }
+    
+        }
+      }
+    }
+.second-part{
+  position: relative;
+  bottom: 20px;
+}
+.third-part{
+  position: relative;
+  bottom: 30px;
+}
+  }
+  .box {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border: 2px solid #062f2b;
+    background-image: url('/images/photo.png');
+    border-radius: 8px;
+    background-size: cover;
+    margin-top: 30px;
+    margin-right: 30px;
+    width: 50vw; // 50% of viewport width
+    max-width: 400px; // Ensures box doesn’t get too big
+    min-width: 200px; // Sets a minimum width for very small screens
+
+  height: 600px;
+    aspect-ratio: 2 / 3; // Maintain the aspect ratio of 2:3
+    margin-bottom: -100px;
+  }
+  @media (max-width: 850px) {
+    flex-direction: column;
+    .head{
+      p{
+        font-weight: bold;
+      }
+    }
+    .mission-left{
+      width: 98%;
+    }
+  
+    .box{
+    width: 100vw;
+      height: 450px;
+      margin-bottom: 20px;
+    padding-left: 79px;     
+    }
+   
+  }
+
+}

@@ -1,0 +1,154 @@
+.team-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 60px 60px 60px;
+    opacity: 0; // Initial state
+  transition: opacity 2s ease;
+ 
+
+  &.fade-in {
+    opacity: 1;
+  }
+
+   
+
+    h1 {
+        color: #062f2b;
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: calc(2vw + 2rem);
+        position: relative;
+        opacity: 0; // Initial state
+        transform: translateY(-100%); // Slide in from below
+        transition: opacity 0.5s ease, transform 1.5s ease; // Transition for both properties
+    
+        &.fade-in {
+          opacity: 1; // Fade in
+          transform: translateY(0); // Move to original position
+        }
+  
+
+
+        &::after {
+            content: '';
+            display: block;
+            width: 270px;
+            height: 5px;
+            background-color: #062f2b;
+            margin: 6px auto 0;
+            position: absolute;
+            border-radius: 4px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            /* Adding transition for smooth bar effect */
+            transition: width 0.3s ease, background-color 0.3s ease;
+        }
+
+        /* Hover effect for the bar */
+        &:hover::after {
+            width: 360px;
+            /* You can increase or decrease this value as needed */
+            background-color: #04645f;
+            /* Optional: change the bar color on hover */
+        }
+    }
+
+    .heading {
+        position: relative;
+        background-color: #062f2b;
+        width: 80%; /* Use a percentage for responsiveness */
+        max-width: 244px; /* Limit the max width */
+        height: 70px;
+        border-top-right-radius: 40px;
+        display: flex;
+        justify-content: center; /* Center text within the heading */
+        align-items: center;
+        margin-left: 0; /* Remove any automatic centering */
+        margin-right: 90%; /* Push it to the left */
+    
+        span {
+            font-size: calc(1.2vw + 0.5rem);
+            font-family: 'Space Grotesk', sans-serif;
+            color: white;
+            opacity: 0; // Initial state
+            transform: translateY(-100%); // Slide in from below
+            transition: opacity 0.5s ease, transform 1.5s ease; // Transition for both properties
+        
+            &.fade-in {
+              opacity: 1; // Fade in
+              transform: translateY(0); // Move to original position
+            }
+      
+        }
+    }
+    
+
+    .team-members {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        /* Center the member containers */
+        gap: 40px;
+        padding: 20px;
+        opacity: 0; // Initial state
+        transform: translateX(-100%); // Slide in from below
+        transition: opacity 0.5s ease, transform 1.5s ease; // Transition for both properties
+    
+        &.fade-in {
+          opacity: 1; // Fade in
+          transform: translateX(0); // Move to original position
+        }
+  
+
+        .team-member {
+            background: #f1f1f1;
+            border-radius: 10px;
+            padding: 10px;
+
+            text-align: center;
+            width: 160px;
+            /* Fixed width for member boxes */
+            transition: transform 0.3s;
+
+            &:hover {
+                transform: scale(1.05);
+                /* Slightly enlarge on hover */
+            }
+
+            .member-photo {
+                border-radius: 6px;
+                width: 100%;
+                height: 120px;
+                object-fit: cover;
+            }
+
+            h4 {
+                font-family: 'Space Grotesk', sans-serif;
+                color: #062f2b;
+                margin: 5px 0 3px;
+                font-size: 1.2rem;
+            }
+            .page{
+                position: relative;
+                top:9px;
+                right: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 150px;
+                border-top-right-radius: 16px;
+                border-bottom-left-radius: 6px;
+                background-color: #062f2b;
+            }
+
+            p {
+                font-family: 'Space Grotesk', sans-serif;
+font-size: 1rem;
+                margin: 0;
+                color:white;
+            }
+        }
+    }
+}

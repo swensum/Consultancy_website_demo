@@ -15,8 +15,7 @@ export const serviceItems2 = [
   '• University and College application Guidance',
   '• Scholarship Guidance',
   '• Health Insurance(OSHC,OVHC).',
-  '• Authorised Representatives for a number of',
-   'Universities and Colleges.'
+  '• Authorised Representatives for a number of Universities and Colleges.'
  
 ];
 export const serviceItems3 = [

@@ -1,0 +1,182 @@
+.about-us {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  padding: 60px 0 0 0;
+  opacity: 0; // Initial state
+  transition: opacity 2s ease;
+ 
+
+  &.fade-in {
+    opacity: 1;
+  }
+
+
+
+  .about-left {
+    position: relative;
+    width: 50%;
+    background-image: url('/images/photo.png');
+    background-size: cover;
+    background-position: center;
+    animation: fadeIn 0.8s ease forwards;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(12px);
+      z-index: 1;
+    }
+
+    h1 {
+      color: #062f2b;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: calc(2vw + 2rem);
+      position: relative;
+      text-align: center;
+      z-index: 2;
+      opacity: 0; // Initial state
+      transform: translateY(-100%); // Slide in from below
+      transition: opacity 0.5s ease, transform 1.5s ease; // Transition for both properties
+  
+      &.fade-in {
+        opacity: 1; // Fade in
+        transform: translateY(0); // Move to original position
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        width: 280px;
+        height: 5px;
+        background-color: #062f2b;
+        margin: 4px auto 0;
+        position: absolute;
+        border-radius: 4px;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: width 0.3s ease, background-color 0.3s ease;
+      }
+
+      &:hover::after {
+        width: 360px;
+        background-color: #04645f;
+      }
+    }
+
+    .about-text {
+      position: relative;
+      z-index: 2;
+      background-color: #062f2b;
+      width: 40%;
+      height: 80px;
+      border-top-right-radius: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+     
+
+      span {
+        font-size: calc(1.2vw + 0.5rem);
+        font-family: 'Space Grotesk', sans-serif;
+        color: white;
+        opacity: 0; // Initial state
+  transform: translateY(-100%); // Slide in from below
+  transition: opacity 0.5s ease, transform 4s ease; // Transition for both properties
+
+  &.fade-in {
+    opacity: 1; // Fade in
+    transform: translateY(0); // Move to original position
+  }
+
+      }
+    }
+
+    p {
+      position: relative;
+      z-index: 2;
+      color: #062f2b;
+      font-size: calc(0.7vw + 0.5rem);
+      width: 80%;
+      text-align: center;
+      margin: 20px auto;
+      line-height: 1.6;
+      font-weight: 600;
+      opacity: 0; // Initial state
+  transform: translateY(-100%); // Slide in from below
+  transition: opacity 0.5s ease, transform 1.5s ease; // Transition for both properties
+
+  &.fade-in {
+    opacity: 1; // Fade in
+    transform: translateY(0); // Move to original position
+  }
+
+
+             }
+  }
+
+  .about-right {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    background-color: #062f2b;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    animation: fadeIn 0.8s ease forwards;
+
+    .points-list {
+      list-style: none;
+      padding: 10px;
+      opacity: 0; // Initial state
+      transform: translateY(-100%); // Slide in from below
+      transition: opacity 0.5s ease, transform 3s ease; // Transition for both properties
+  
+      &.fade-in {
+        opacity: 1; // Fade in
+        transform: translateY(0); // Move to original position
+      }
+
+
+      li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+        font-size: calc(1vw + 0.5rem);
+        font-family: 'Space Grotesk', sans-serif;
+        color: white;
+        line-height: 2;
+      }
+
+      .icon {
+        margin-right: 10px;
+        color: white;
+        font-size: 1.5rem;
+      }
+    }
+
+    .explore-button {
+      margin-left: 45px;
+      padding: 10px 20px;
+      font-family: 'Space Grotesk', sans-serif;
+      color: #062f2b;
+      border: 2px solid white;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #062f2b;
+        color: white;
+      }
+    }
+  }
+}

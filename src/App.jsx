@@ -1,20 +1,10 @@
-
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
-import Landing from './Pages/Landing/Landing'; 
+import Routes from './Routes/Routes';
 import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <Router>
-      <div className="App">
-        <Routes>
-          <Route path="/" element={<Landing />} /> 
-          
-        </Routes>
-      </div>
-    </Router>
+    <Routes/>
   );
-}
+};
 
 export default App;
