@@ -75,8 +75,7 @@ const Mission = () => {
 
       
      
-            <div className="box"></div>
-           
+        
   
       </div>
       );

@@ -1,6 +1,10 @@
 import {  useState, useEffect } from 'react';
 import './course.scss';
-import photo from '/images/photo.png';
+import photo2 from '/images/photo2.jpg';
+import photo4 from '/images/photo4.jpg';
+import photo5 from '/images/photo5.jpg';
+
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarAlt, faStar, faUser, faBook, faClock } from '@fortawesome/free-solid-svg-icons';
 
@@ -31,7 +35,7 @@ const Section = () => {
     <h1>Coaching Courses</h1>
     <div className="courses-container">
       <div className="course1">
-        <img src={photo} alt="VISA1" className="visa" />
+        <img src={photo2} alt="VISA1" className="visa" />
         <div className="course-info">
           <div className="date-info">
             <FontAwesomeIcon icon={faCalendarAlt} />
@@ -68,7 +72,7 @@ const Section = () => {
 
 
       <div className="course2">
-        <img src={photo} alt="VISA2" className="visa" />
+        <img src={photo4} alt="VISA2" className="visa" />
         <div className="course-info">
           <div className="date-info">
             <FontAwesomeIcon icon={faCalendarAlt} />
@@ -106,7 +110,7 @@ const Section = () => {
 
 
       <div className="course3">
-        <img src={photo} alt="VISA3" className="visa" />
+        <img src={photo5} alt="VISA3" className="visa" />
         <div className="course-info">
           <div className="date-info">
             <FontAwesomeIcon icon={faCalendarAlt} />

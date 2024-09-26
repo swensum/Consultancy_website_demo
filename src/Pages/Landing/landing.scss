@@ -29,257 +29,153 @@
     overflow: hidden;
 
   .Landing-header {
+    display: flex;
     position: relative;
     width: 100%;
-    height: 120vh;
-   background: rgb(226, 241, 230);
-  
+    min-height: auto;
+    background-image: url('/images/green.jpg');
+      
+
+  padding: 0;
     z-index: 1;
    
   }
-
-  .header-content {
-    position: relative;
-    top: 15%;
-    z-index: 3;
-    text-align: left;
-    color: white;
-    padding: 0 65px;
-    margin-top:50px;
-
-    .hbox {
-      background-color:  #062f2b;
-      width: 40%;
-      height: 80px;
-      border-top-right-radius: 40px;
-
-
-      display: flex;
-      justify-content: center;
-   align-items: center;
-      margin-bottom: 20px;
-
-
-      h1 {
-        font-size:  calc(1.2vw + 0.5rem);
-        font-family: 'Space Grotesk', sans-serif;
-
-         
-        animation: fadeInText 1s ease-in-out 0.5s forwards;
-   opacity: 0;
-        
-        color:white;
-       
-      }
-
-      @media (max-width: 768px) {
-
-          h1 {
-            font-size: 1.5rem;
-            padding-right: 20px;
-          }
-        
-
-      }
-    }
-    
-    .pbox {
-      p {
-        font-size: 4rem;
-        font-weight: bold;
-        font-family: 'Space Grotesk', sans-serif;
-text-align: left;
-         color:  #062f2b;
-        margin-bottom: 10px;
-        animation: slideInText 1.2s ease-in-out 0.8s forwards;
-        opacity: 0;
-      
-      }
-
-      .image-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        /* Space between images and text */
-        flex-wrap: wrap;
-
-        .location {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          margin: 0 90px;
-   
-
-          .flag {
-            padding-left: 100px;
-            width: 180px;
-           
-            height: 130px;
-            margin-bottom: 130px;
-             }
-
-          .flag2 {
-            position: relative;
-            top: 60px;
-            right: 150px;
-            width: 180px;
-            /* Adjusted size for the flag images */
-            height: 130px;
-
-          }
-
-          .flag3 {
-            position: relative;
-            top: 50px;
-            left: 30px;
-            width: 410px;
-            height: auto;
-
-          }
-
-          .flag4 {
-            position: relative;
-            top: 230px;
-            right: 170px;
-            width: 460px;
-            height: auto;
-
-          }
-          @media (max-width:1200px){
-            .flag{
-              width: 150px;
-           
-              height: 100px;
-            
-            margin-right: 0;
-              margin-top: 10%;
-           
-            } .flag2{
-             right: 105%;
-              width: 150px;
-              height: 100px;
-            } .flag3{
-              width: 300px;
-            position: relative;
-            margin-top: 10px;
-            
-            
-            margin-right: 30%;
-            
-            
-            } .flag4{
-              margin-right: 2%;
-              bottom: 0;
-              margin-bottom:0;
-              
-              width: 350px;
-            }
-                   
-                  
-            
-          }
-          @media (max-width: 888px) {
-.flag{
-  width: 80px;
-margin-right: 160%;
-  margin-top: 30%;
-  height: 80px;
-} .flag2{
- right: 240%;
-  width: 80px;
-  height: 80px;
-} .flag3{
-  width: 230px;
-position: relative;
-margin-top: 10px;
-
-
-margin-right: 130%;
-
-
-} .flag4{
-  margin-right: 25%;
-  bottom: 0;
-  margin-bottom: 25%;
+  .header-First {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    position: relative; /* Ensure relative positioning for absolute elements inside */
   
-  width: 250px;
-}
-       
-      
-
-          }
-        }
-      }
-
-    }
-    
-
-    .text {
+    .header-content {
       display: flex;
       flex-direction: column;
       position: relative;
-      top: 20px;
-
+      z-index: 3;
+      text-align: left;
+      color: white;
+      padding: 0 35px;
+      margin-top: 140px;
+  
+      .hbox {
+        background-color: #062f2b;
+        width: 40%;
+        height: 80px;
+        border-top-right-radius: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+  
+        h1 {
+          font-size: calc(1.2vw + 0.5rem);
+          font-family: 'Space Grotesk', sans-serif;
+          animation: fadeInText 1s ease-in-out 0.5s forwards;
+          opacity: 0;
+          color: white;
+        }
+  
+        @media (max-width: 768px) {
+          h1 {
+            font-size: calc(1.2vw + 0.5rem);
+            padding-right: 20px;
+          }
+        }
+      }
+  
       p {
+        font-size: calc(1.9vw + 3rem);
+        font-weight: 900;
+        width: 50%;
+        font-family: 'Poppins', sans-serif;
+        text-align: left;
+        color: #062f2b;
         position: relative;
-        top: 20px;
-        color:  #062f2b;
-        font-family: 'Space Grotesk', sans-serif;
-        font-size: 4rem;
-        font-weight: bold;
+        bottom: 40px;
         animation: slideInText 1.2s ease-in-out 0.8s forwards;
         opacity: 0;
+        @media (max-width:1200px){
+          font-size: calc(1.2vw + 3rem);
+        }
+        @media (max-width: 600px) {
+        
+            font-size: 2.6rem
+           
+        }
       }
-     
     }
-   
-
-  }
-  .three-boxes-container {
-    display: flex;
-    flex-direction: row;
-    position: absolute;
-    right: 6%;
-  bottom: 20%;
-    
-    width: 50%;
-    height: 50%;
-    padding: 10px;
   
-    .box1, .box2, .box3 {
-
-  border: none;
-      border-radius: 16px;
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
-      
-    }
+    .three-boxes-container {
+      position: absolute; 
+      right: 40px; 
+      top: 50%; 
+      transform: translateY(-50%); /* Centers the boxes vertically */
+      display: flex;
+      flex-direction: column; /* Stack the boxes vertically */
+      z-index: 2; /* Ensure the boxes appear over the header content */
+  
+      .box1, .box2, .box3 {
+        border: none;
+        border-radius: 16px;
+        min-width: 300px;
+        height: 450px;
+        padding: 10px;
+        margin-bottom: 10px;
+        flex: none; /* Prevent the boxes from stretching */
+      }
+  
+      .box1 {
+        position: relative;
+        top: 490px;
+        right: 40px;
+        background-image: url('/images/photo.png');
+        background-size: cover;
+        z-index: 2;
+        overflow: hidden;
+      }
+  
+      .box2 {
+        position: relative;
+        top: 40px;
+        background-color: rgb(155, 197, 155);
+        z-index: 1;
+      }
+  
+      .box3 {
+        position: relative;
+        background-color: rgba(184, 228, 184, 0.856);
+        bottom: 0;
+        top: -500px;
+        right: 80px;
+      }
+      @media (max-width:700px){
+      margin-right: 30px;
+    width: 100px;
+    
+        
+        .box1, .box2, .box3 {
+          border: none;
+          min-width: 130px;
+          height: 350px;
+          margin-bottom: 10px;
+          flex: none;
+        }
     .box1{
-      position: relative;
-      left:380px;
-      background-image: url('/images/photo.png');
-      background-size: cover;
-      z-index: 2;
-      overflow: hidden;
-    }
-    .box2{
-      position: relative;
-      top: 20px;
-      left: 130px;
-      background-color: rgb(87, 139, 87);
-      z-index: 1;
-      
+      position:relative;
+     top: 400px;
+    
     }
     .box3{
       position: relative;
-      right: 50px;
-      bottom: 20px;
-      background-color: rgb(141, 201, 141);
+top: -380px;
+      
+    }
+      
   
+      
+    }
     }
   }
+  
   .horizontal-containers {
     display: flex;
     flex-direction: row;
@@ -338,16 +234,16 @@ margin-right: 130%;
     .container1 {
       position: relative;
       animation: swap1 15s infinite;
-      top: 120px;
-      left:33%;
+      top: 80px;
+      left:25%;
       z-index: 3;
     }
   
     .container2 {
       position: relative;
       animation: swap2 15s infinite;
-      top: 20px;
-      left: 43%;
+      top: 10px;
+      left: 45%;
       z-index: 3;
     }
   
@@ -420,38 +316,24 @@ margin-right: 130%;
       height: 100vh; /* Adjust the height for smaller screens */
     }
     .header-content {
-      padding: 0 20px; /* Reduce padding for smaller screens */
+   margin-top: 30%;
   
       .hbox {
       
         h1 {
           font-size: 1.4rem; /* Reduce font size */
         }
+       
       }
+     
     }
     .three-boxes-container{
-      top:32%;
-      right: 5%;
-    
-      width: 50%;
-      .box1{
-        right: 0;
-       left: 65%;
-      }
-      .box2{
-        right: 0;
-        left:25%;
-      }
-      .box3{
-        right: 0;
-        left: 5%;
-      }
-
+      padding-top: 50px;
     }
   
     .horizontal-containers {
       flex-direction: column; 
-      right: 10%;
+      right: 20%;
       
   width: 250px;
       .container1,
@@ -475,6 +357,7 @@ margin-right: 130%;
         font-size: 0.6rem;
       }
     }
+   
     .container2{
       margin-left:70% ;
     }
@@ -518,7 +401,7 @@ margin-right: 130%;
   
     @keyframes swap3 {
       0% {
-        top: 290px;
+        top: 200px;
         left: 50px;
       }
       33% {
@@ -538,11 +421,17 @@ margin-right: 130%;
   }
   @media (max-width: 888px) {
     .Landing-header {
-      height: 100vh; /* Adjust the height for smaller screens */
-    }
+      height: 100vh; 
+      margin: 0;
+      padding:0; 
+      }
   
     .header-content {
-      padding: 0 20px; /* Reduce padding for smaller screens */
+      position: relative;
+      right: 32px;
+      padding: 0 20px; 
+      width: 100%;
+      
   
       .hbox {
         width: 50%; /* Increase width for better readability */
@@ -554,37 +443,11 @@ margin-right: 130%;
       .pbox p {
         font-size: 2rem; /* Reduce font size */
       }
-      .text {
-      
-        p {
-          position: relative;
-          top: 20px;
-          color: #062f2b;
-                font-size: 2rem; /* Adjusted font size */
-          font-weight: bold;
-          margin-top: 15%; /* Adjusted margin */
-        }
-      }
+     
     
     
     }
-    .three-boxes-container{
     
-      width: 70%;
-      .box1{
-        right: 0;
-       left: 65%;
-      }
-      .box2{
-        right: 0;
-        left:25%;
-      }
-      .box3{
-        right: 0;
-        left: 5%;
-      }
-
-    }
   
     .horizontal-containers {
       flex-direction: column; /* Stack containers vertically */
@@ -810,13 +673,11 @@ margin-right: 130%;
       bottom: 220px;
 
 
-      .circle1,
-      .circle2,
-      .circle3 {
-        width: 250px;
-        height: 250px;
+      .circle1 {
+        width: 400px;
+        height: 400px;
         border-radius: 50%;
-        border: 4px solid white;
+        border: 4px solid #062f2b;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -829,78 +690,29 @@ margin-right: 130%;
         overflow: hidden;
         z-index: 1;
 
-        &::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-color: rgba(12, 12, 12, 0.384);
-          z-index: 0;
-          opacity: 0;
-          transition: opacity 0.5s ease;
+      
 
-        }
 
-        &.active::before {
-          opacity: 1;
-        }
-
-        .play-icon {
-          position: absolute;
-          font-size: 3rem;
-          color: orange;
-          z-index: 1;
-          display: none;
-        }
-
-        &.active .play-icon {
-          display: block;
-        }
-
+      
 
 
       }
 
-      .circle.active {
-        width: 300px;
-        height: 300px;
-        border: 4px solid  #062f2b;
-        z-index: 2;
-      }
-
-      .circle.small {
-        width: 200px;
-        height: 200px;
-        z-index: 0;
-      }
+     
 
 
 
       .circle1 {
         position: relative;
         left: 190px;
-        background-image: url('/images/photo.png');
+        background-image: url('/images/photo1.jpg');
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+      
 
       }
 
 
-      .circle2 {
-        position: relative;
-        top: 80px;
-        left: 120px;
-        background-image: url('/images/photo.png');
-
-      }
-
-      .circle3 {
-        position: relative;
-        bottom: 20px;
-        left: 20px;
-        background-image: url('/images/photo.png');
-
-      }
+   
     }
    
     @media (max-width: 950px) {
@@ -928,37 +740,10 @@ margin-right: 130%;
         z-index: 0;
        
 
-        .circle1,
-        .circle2,
-        .circle3 {
-          position: relative;
-          margin-left: -140px;
-        }
-
-        .circle1 {
-          z-index: 3;
-          margin-left: 0;
-        }
-
-        .circle2 {
-          position: relative;
-          left: 170px;
-          z-index: 2;
-        }
-
-        .circle3 {
-          z-index: 1;
-          position: relative;
-          left: 170px;
-        }
       }
-
     }
   }
 
-    /*fifth-container */
-    /*about section*/
-  
   }
 
 

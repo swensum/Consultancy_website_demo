@@ -1,0 +1,64 @@
+.accreditation-section {
+    text-align: center;
+    padding: 20px 0;
+    background-color:rgb(226, 241, 230);
+  
+    .accreditation-heading {
+      font-family: 'Space Grotesk', sans-serif;
+   
+      font-size: 2.5rem;
+      color: #062f2b;
+      margin-bottom: 80px;
+      &::after {
+        content: '';
+        display: block;
+        width: 290px;
+        height: 5px;
+        background-color: #062f2b;
+        margin: 8px auto 0;
+        position: absolute;
+        border-radius: 4px;
+        left: 50%;
+        transform: translateX(-50%);
+        
+        /* Adding transition for smooth bar effect */
+        transition: width 0.3s ease, background-color 0.3s ease;
+      }
+  
+      /* Hover effect for the bar */
+      &:hover::after {
+        width: 360px; /* You can increase or decrease this value as needed */
+        background-color: #04645f; /* Optional: change the bar color on hover */
+      }
+    }
+  
+    .logos-container {
+      overflow: hidden; /* Hide the overflowing logos */
+      width: 100%; /* Full-width container */
+      position: relative;
+    }
+  
+    .logos-track {
+      display: flex;
+      width: max-content; /* Ensure container spans enough to hold logos */
+      animation: scrollLogos 15s linear infinite; /* Continuous scrolling */
+    }
+  
+    .logo {
+      height: 150px; /* Increased the size of logos */
+      width: auto;
+      margin: 0 80px; /* Increased gap between logos */
+      flex-shrink: 0; /* Prevent shrinking */
+    }
+  
+    /* Keyframes for smooth infinite scrolling */
+    @keyframes scrollLogos {
+      0% {
+        transform: translateX(0); /* Start at original position */
+      }
+      100% {
+        transform: translateX(-50%); /* Move halfway (since we duplicate logos) */
+      }
+    }
+  }
+  

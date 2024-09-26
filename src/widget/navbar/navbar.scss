@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  
+ 
   background: rgba(1, 25, 41, 0.9) ;
   transition: top 0.3s ease-in-out;
   z-index: 1000;
@@ -23,7 +23,7 @@
 
 
 .navbar-main {
-  margin-top: 20px;
+  margin-top: 10px;
   display: flex;
   flex-direction: row;
   height: 50px;
@@ -55,10 +55,13 @@ color: white;
   left:50px;
 
   img {
-   
-  
-    max-width: 300px; 
+    max-width: 350px; 
     height: auto;    
+  }
+  @media (max-width: 980px) {
+    img{
+      width: 300px;
+    }
   }
 }
 
@@ -144,7 +147,7 @@ padding-top: 12px;
   border: none;
   border-radius: 5px;
  position: fixed;
- right: 40px;
+ right: 30px;
   cursor: pointer;
   transition: background-color 0.3s ease;
  
