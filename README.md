@@ -1,8 +1,90 @@
-# React + Vite
+# 🧭 Consultancy Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A professional and responsive **Consultancy Website** built with **React**, **SCSS**, and **JavaScript**, designed to represent consulting services, team information, and contact forms for business outreach and client acquisition.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🖥️ Live Demo
+
+🌐 [Visit the Live Website](https://your-deployment-link.com)
+
+---
+
+## ✨ Features
+
+- ✅ Fully responsive layout for desktop, tablet, and mobile
+- 🧠 Smooth and modern user interface
+- 🧑‍💼 Dedicated sections for About, Services, Team, and Contact
+- 💬 Integrated contact form (custom form handler or service)
+- 🎨 Styled using modular **SCSS** for maintainability
+- ⚡ Fast performance and optimized assets
+
+---
+## 📸 Screenshots
+
+<p align="center">
+  <img src="./screenshots/frontend10.jpg" alt="Screenshot 10" width="30%" style="margin: 0.5rem;" />
+  <img src="./screenshots/frontend9.jpg" alt="Screenshot 9" width="30%" style="margin: 0.5rem;" />
+  <img src="./screenshots/frontend8.jpg" alt="Screenshot 8" width="30%" style="margin: 0.5rem;" />
+</p>
+<p align="center">
+  <img src="./screenshots/frontend7.jpg" alt="Screenshot 7" width="30%" style="margin: 0.5rem;" />
+  <img src="./screenshots/frontend6.jpg" alt="Screenshot 6" width="30%" style="margin: 0.5rem;" />
+  <img src="./screenshots/frontend5.jpg" alt="Screenshot 5" width="30%" style="margin: 0.5rem;" />
+</p>
+<p align="center">
+  <img src="./screenshots/frontend4.jpg" alt="Screenshot 4" width="30%" style="margin: 0.5rem;" />
+  <img src="./screenshots/frontend3.jpg" alt="Screenshot 3" width="30%" style="margin: 0.5rem;" />
+  <img src="./screenshots/frontend2.jpg" alt="Screenshot 2" width="30%" style="margin: 0.5rem;" />
+</p>
+<p align="center">
+  <img src="./screenshots/frontend1.jpg" alt="Screenshot 1" width="30%" style="margin: 0.5rem;" />
+</p>
+
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer       | Technology     |
+|-------------|----------------|
+| 💻 Frontend | React JS       |
+| 🎨 Styling  | SCSS           |
+| 🌐 Language | JavaScript     |
+| 📦 Tooling  | Vite / Create React App (CRA) |
+| 🔧 Others   | EmailJS / Netlify Forms / Custom APIs |
+
+---
+
+## 🚀 Getting Started
+
+> Follow these steps to run the project locally:
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/yourusername/consultancy-website.git
+
+# 2. Navigate to the project directory
+cd consultancy-website
+
+# 3. Install dependencies
+npm install
+
+# 4. Start the development server
+npm start
+```
+---
+## 📬 Contact
+
+For feedback or questions, reach out via:
+
+- 💼 LinkedIn: [Swen Shrestha](https://www.linkedin.com/in/swen-shrestha-a89041304/)
+
+- 📧 Email: [shresthaswen80@gmail.com](mailto:shresthaswen80@gmail.com)
+
+## ⭐️ Show Your Support
+
+If you like this project, please ⭐️ it and share it with your friends!
+
+---
+gi
