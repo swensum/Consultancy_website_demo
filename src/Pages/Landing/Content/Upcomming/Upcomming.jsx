@@ -1,9 +1,12 @@
 import './upcomming.scss';
-import {  useState,useEffect } from 'react';
-import { events } from '../../../../events';  
-import laptop from '/images/laptop.png'
+import { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faClock, faMapMarkerAlt, faPlay } from '@fortawesome/free-solid-svg-icons';
+import upcomingEvents from '../../../../upcomingEvents'; 
+
 const UpComming = () => {
   const [isUpVisible, setIsUpVisible] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       const UpSection = document.querySelector('.Up-container');
@@ -19,39 +22,39 @@ const UpComming = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
   return (
     <div className={`Up-container ${isUpVisible ? 'fade-in' : ''}`}>
       <div className="up-left">
+        <span className={isUpVisible ? 'fade-in' : ''}>Our Events</span>
         <h1 className={isUpVisible ? 'fade-in' : ''}>Join Our Upcoming Events</h1>
-        <div className="events">
-          <span className={isUpVisible ? 'fade-in' : ''}>Our Events</span>
-        </div>
+        <p className={isUpVisible ? 'fade-in' : ''}>
+          Stay tuned for exciting activities, workshops, and more that you don't want to miss.
+        </p>
 
-    
-        {events.map((event) => (
-          <div key={event.id} className="first-event-container">
-            <div className="date">
-              <h2>{event.date}</h2>
-              <p>{event.monthYear}</p>
-            </div>
-            <div className="event-details">
-              <div className="bar"></div>
-              <div className="event-info">
-                <div className="time">
-                  <p>{event.time}</p>
-                  <span>{event.location}</span>
-                </div>
-                <h3 className={isUpVisible ? 'fade-in' : ''}>{event.title}</h3>
+        {/* New row of three containers */}
+        <div className="up-row">
+          {upcomingEvents.map(event => (
+            <div className="up-container" key={event.id}>
+              <img src={event.image} alt={`Event ${event.id}`} />
+              <div className="up-events">
+                <div className="up-event1">{event.date}</div>
+                <div className="up-event2"><FontAwesomeIcon icon={faClock} /> {event.time}</div>
+                <div className="up-event3"><FontAwesomeIcon icon={faMapMarkerAlt} /> {event.location}</div>
+              </div>
+              <h2>{event.title}</h2>
+              <div className="up-event4">
+                <h3>{event.description}</h3>
+              </div>
+              <div className="watch">
+                <a href={event.videoLink} target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={faPlay} /> watch us
+                </a>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-      
-      <div className="up-right">
-      <img src={laptop} alt="Photo" className="up-photo" />
-          
-             </div>
     </div>
   );
 };

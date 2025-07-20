@@ -64,9 +64,9 @@ const Mission = () => {
         </div>
         <div className="text-container">
           <div className="head">
-            <h2 className={isMissionVisible ? 'fade-in' : ''}>Vision</h2>
+            <h2 className={isMissionVisible ? 'fade-in' : ''}>Objective</h2>
             </div>
-            <p className={isMissionVisible ? 'fade-in' : ''}>We are established with a vision to pro- vide quality services that exceed the ex- pectations of our esteemed students</p>
+            <p className={isMissionVisible ? 'fade-in' : ''}>To be one of the trusted leaders in the Ed- ucational Counseling Service industry by providing enhanced services and relationships.</p>
         </div>
         </div>
       

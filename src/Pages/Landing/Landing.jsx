@@ -3,7 +3,7 @@ import './landing.scss';
 import Navbar from '../../widget/navbar/NavBar';
 import six from '/images/six.png';
 import student from '/images/student.png';
-import photo1 from '/images/photo1.jpg';
+
 import success from '/images/success.png';
 import AboutUs from '../../Pages/Landing/Content/about/About';
 import Section from '../../Pages/Landing/Content/course/course';
@@ -125,13 +125,14 @@ const Landing = () => {
 
     </section>
   
+    
+    <UpComming/>
+    <Mission/>
     <section id="team">
       <Team />
     </section>
-    <UpComming/>
     <Testimonial/>
-    <Mission/>
-    
+  
     <Support/>
   <section id="contact">
     <Footer/>

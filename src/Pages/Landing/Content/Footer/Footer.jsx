@@ -1,6 +1,6 @@
 import './footer.scss';
 
-import logo from '/images/logo.png';
+import logo from '/images/logos/logo.png';
 
 import SocialIcons from "../../../../Pages/Landing/Content/Footer/SocialIcons";
 

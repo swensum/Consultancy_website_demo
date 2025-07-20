@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import './navbar.scss';
 
 
-import logo from '/images/logo.png';
+import logo from '/images/logos/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBell, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faYoutube, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';

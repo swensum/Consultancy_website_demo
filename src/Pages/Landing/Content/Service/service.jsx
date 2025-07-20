@@ -1,13 +1,16 @@
 import { useState, useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBook, faChartBar, faFileAlt, faBriefcase, faUserGraduate, faCreditCard } from '@fortawesome/free-solid-svg-icons';
 import './service.scss';
-import { serviceItems1,serviceItems2, serviceItems3, serviceItems4, serviceItems5, serviceItems6,} from '../../../../serviceitems';
-
+//import { serviceItems1, serviceItems2, serviceItems3, serviceItems4, serviceItems5, serviceItems6 } from '../../../../serviceitems';
+import service1 from '/images/servicepic/service1.png';
+import service2 from '/images/servicepic/service2.png';
+import service3 from '/images/servicepic/service3.png';
+import service4 from '/images/servicepic/service4.png';
+import service5 from '/images/servicepic/service5.png';
+import service6 from '/images/servicepic/service6.png';
 
 const Service = () => {
-  const [expandedService, setExpandedService] = useState(null);
   const [isServiceVisible, setIsServiceVisible] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       const ServiceSection = document.querySelector('.service-container');
@@ -24,119 +27,75 @@ const Service = () => {
     };
   }, []);
 
-  const toggleService = (service) => {
-    setExpandedService(expandedService === service ? null : service);
-  };
-
 
   return (
     <div className={`service-container ${isServiceVisible ? 'fade-in' : ''}`}>
-      <h3 className={isServiceVisible ? 'fade-in' : ''}>Our Services</h3>
+      <span className={isServiceVisible ? 'fade-in' : ''}> Our Services</span>
+      <h2 className={isServiceVisible ? 'fade-in' : ''}>Discover The Services We Offer</h2>
+      <div className="paragraph">
+        Explore our variety of services tailored to suit different industries and individual requirements. Whether you're looking for professional advice, hands-on assistance, or customized packages, we have the expertise to deliver outstanding results.
+      </div>
 
       <div className="whole-container">
         <div className="first-container">
-          <div
-            className={`service1 ${expandedService === 'service1' ? 'expanded' : ''}`}
-            onClick={() => toggleService('service1')}
-          >
-            <FontAwesomeIcon icon={faBook} className="service-icon" />
+          <div className="service1">
+            <div className="numbers-container">
+                   <img src={service1} alt="Service1" className="image" />
+                   <div className="numbers-box"> 01</div>
+         
+            </div>
             <h1>English Test Preparation Class</h1>
-            <p>IELTS & PTE</p>
-            {expandedService === 'service1' && (
-              <div className="expanded-content">
-                <ul>
-                  {serviceItems1.map((item, index) => (
-                    <li key={index}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </div>
-          <div
-            className={`service2 ${expandedService === 'service2' ? 'expanded' : ''}`}
-            onClick={() => toggleService('service2')}
-          >
-            <FontAwesomeIcon icon={faChartBar} className="service-icon" />
-            <h1>High rate of College</h1>
-            <p>Universities Selection</p>
-            {expandedService === 'service2' && (
-              <div className="expanded-content">
-                <ul>
-                  {serviceItems2.map((item, index) => (
-                    <li key={index}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </div>
-          <div
-            className={`service3 ${expandedService === 'service3' ? 'expanded' : ''}`}
-            onClick={() => toggleService('service3')}
-          >
-            <FontAwesomeIcon icon={faFileAlt} className="service-icon" />
-            <h1>VISA Documentation</h1>
-            <p>Guidance</p>
-            {expandedService === 'service3' && (
-              <div className="expanded-content">
-                <ul>
-                  {serviceItems3.map((item, index) => (
-                    <li key={index}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </div>
-        </div>
+          <p>"Join our English Test Preparation Class and take the first step towards achieving your academic goals!"</p>
 
-        <div className="second-container">
-          <div
-            className={`service4 ${expandedService === 'service4' ? 'expanded' : ''}`}
-            onClick={() => toggleService('service4')}
-          >
-            <FontAwesomeIcon icon={faBriefcase} className="service-second" />
-            <h1>Accommodation and Job</h1>
-            <p>Search Assistance</p>
-            {expandedService === 'service4' && (
-              <div className="expanded-second">
-                <ul>
-                  {serviceItems4.map((item, index) => (
-                    <li key={index}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
           </div>
-          <div
-            className={`service5 ${expandedService === 'service5' ? 'expanded' : ''}`}
-            onClick={() => toggleService('service5')}
-          >
-            <FontAwesomeIcon icon={faUserGraduate} className="service-second" />
-            <p>Career Counselling</p>
-            {expandedService === 'service5' && (
-              <div className="expanded-second">
-                <ul>
-                  {serviceItems5.map((item, index) => (
-                    <li key={index}>{item}</li>
-                  ))}
-                </ul>
+          <div className="service2">
+          <div className="numbers-container">
+                   <img src={service2} alt="Service2" className="image" />
+                   <div className="numbers-box"> 02</div>
+        
+            </div>
+             <h1>High rate of College</h1>
+             <p>"Join our High Rate of College program and take the next step toward your educational journey!"</p>
               </div>
-            )}
+          <div className="service3">
+          <div className="numbers-container">
+                    <img src={service3} alt="Service3" className="image" />
+                    <div className="numbers-box"> 03</div>
+            </div>
+              <h1>VISA Documentation</h1>
+              <p>"Our VISA Documentation service provides comprehensive assistance to individuals seeking to navigate complex world of visa applications."</p>
+          
           </div>
-          <div
-            className={`service6 ${expandedService === 'service6' ? 'expanded' : ''}`}
-            onClick={() => toggleService('service6')}
-          >
-            <FontAwesomeIcon icon={faCreditCard} className="service-second" />
-            <p>Education Loan Assistance</p>
-            {expandedService === 'service6' && (
-              <div className="expanded-second">
-                <ul>
-                  {serviceItems6.map((item, index) => (
-                    <li key={index}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
+
+          <div className="service4">
+          <div className="numbers-container">
+                   <img src={service4} alt="Service4" className="image" />
+                   <div className="numbers-box"> 04</div>
+        
+            </div>
+               <h1>Accommodation and Job</h1>
+               <p>"Our Accommodation and Job service is tailored to provide you with essential resources for a successful relocation."</p>
+            </div>
+          <div className="service5">
+          <div className="numbers-container">
+                 <img src={service5} alt="Service5" className="image" />
+                 <div className="numbers-box"> 05</div>
+          
+            </div>
+               <h1>Career Counselling</h1>
+               <p>"Our Career Counselling service is dedicated to empowering individuals to make informed decisions about their professional paths. "</p>
+
+          </div>
+          <div className="service6">
+          <div className="numbers-container">
+                <img src={service6} alt="Service6" className="image" />
+                <div className="numbers-box"> 06</div>
+              
+            </div>
+               <h1>Education Loan Assistance</h1>
+               <p>"Our Education Loan Assistance service is designed to empower students and their families by simplifying the process of obtaining financial aid for education."</p>
+           
+
           </div>
         </div>
       </div>

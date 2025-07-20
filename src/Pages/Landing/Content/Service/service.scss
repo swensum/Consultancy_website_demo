@@ -1,236 +1,61 @@
 .service-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 30px 60px 60px 60px;
-    opacity: 0; // Initial state
-    transition: opacity 2s ease;
-   
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 60px;
+  font-family: 'Space Grotesk', sans-serif;
+  background-color: #f4fbf6;
+  opacity: 0; // Initial state
+  transition: opacity 2s ease;
+
+  &.fade-in {
+    opacity: 1;
+  }
+
+  span {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #28aa4a;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 0.5s ease, transform 1.5s ease;
+
     &.fade-in {
       opacity: 1;
+      transform: translateY(0);
     }
+  }
 
-    h3 {
-      color:#062f2b;
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: calc(2vw + 2rem);
-      position: relative;
-      opacity: 0; // Initial state
-      transform: translateY(-100%); // Slide in from below
-      transition: opacity 0.5s ease, transform 1.5s ease; // Transition for both properties
-  
-      &.fade-in {
-        opacity: 1; // Fade in
-        transform: translateY(0); // Move to original position
-      }
+  h2 {
+    margin-top: 10px;
+    color: #062f2b;
+    font-size: calc(2vw + 1.5rem);
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 0.5s ease, transform 1.5s ease;
 
-      
-
-      &::after {
-        content: '';
-        display: block;
-        width: 370px;
-        height: 5px;
-        background-color: #062f2b;
-        margin: 6px auto 0;
-        position: absolute;
-        border-radius: 4px;
-        left: 50%;
-        transform: translateX(-50%);
-        
-        /* Adding transition for smooth bar effect */
-        transition: width 0.3s ease, background-color 0.3s ease;
-      }
-  
-      /* Hover effect for the bar */
-      &:hover::after {
-        width: 460px; /* You can increase or decrease this value as needed */
-        background-color: #04645f; /* Optional: change the bar color on hover */
-      }
+    &.fade-in {
+      opacity: 1;
+      transform: translateY(0);
     }
+  }
 
-    .whole-container {
+  .paragraph {
+    text-align: center;
+    font-size: 1rem;
+    color: #8a8a8a;
+    margin-bottom: 30px;
+  }
+
+  .whole-container {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start; /* Align at the top for consistency */
+    flex-wrap: wrap;
+
+    .first-container {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-      gap: 30px;
-     
-
-      .first-container,
-      .second-container {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 25px;
-
-        .service1,
-        .service3,
-        .service5 {
-          background: #f1c50e26;
-        }
-
-        .service1,
-        .service2,
-        .service3,
-        .service4,
-        .service5,
-        .service6 {
-          width: 400px;
-          height: 250px;
-          border: 1px solid #f1c50e57;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          position: relative;
-          cursor: pointer;
-          transition: all 0.3s ease;
-          flex: 1;
-          border-radius: 10px;
-
-
-
-
-          &.expanded {
-            min-width: 20%;
-            height: 320px;
-            background: rgba(1, 25, 41, 0.9);
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-
-            .expanded-content,
-            .expanded-second {
-              margin-top: 3px;
-
-              ul {
-                list-style: none;
-                padding: 0;
-                margin: 0;
-
-                li {
-                  padding-left: 3px;
-                  margin: 7px 0;
-                  color: white;
-                  font-size: calc(1.3vw + 0.2rem);
-                  text-align: left;
-                }
-              }
-            }
-
-            p {
-              margin-bottom: 2px;
-              font-size: calc(1.5vw + 0.5rem);
-              font-weight: bold;
-              color: white;
-              text-align: center;
-            }
-          }
-
-          &.expanded .service-icon,
-          &.expanded .service-second,
-          &.expanded .arrow-icon,
-          &.expanded h1 {
-            display: none;
-          }
-
-          .service-icon,
-          .service-second {
-            padding-top: 40px;
-            font-size: 3rem;
-            color: #046a58;
-          }
-
-          h1 {
-            color: #333;
-            font-size: calc(1.5vw + 0.2rem);
-            font-weight: bold;
-            font-family: 'Space Grotesk', sans-serif;
-          }
-
-          p {
-            display: flex;
-          align-items: center;
-
-            position: relative;
-            bottom: 8px;
-            color: #333;
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: calc(1.5vw + 0.2rem);
-            font-weight: bold;
-          }
-        }
-      }
-    }
-    
-  
-    }
-    .service1,
-    .service2,
-    .service3,
-    .service4,
-    .service5,
-    .service6 {
-  transition: all 0.6s ease;
-  &:hover {
-    transform: scale(1.05); // Slightly scale the container on hover
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-  }
- 
-
-}
-
-
-  
-
-  @media (max-width: 1200px) {
-    h3 {
-      font-size: 2rem;
-    }
-
-    .first-container,
-    .second-container {
-      gap: 20px;
-
-      .service1,
-      .service2,
-      .service3,
-      .service4,
-      .service5,
-      .service6 {
-        width: 350px;
-        height: 220px;
-
-       
-
-        h1 {
-          font-size: 1.3rem;
-        }
-
-        p {
-          font-size: 1.1rem;
-        }
-
-        .service-icon,
-        .service-second {
-          padding: 10px;
-          width: 45px;
-        }
-      }
-    }
-  }
-  @media (max-width: 950px) {
-    .whole-container {
-      gap: 20px;
-    }
-
-    .first-container,
-    .second-container {
+      gap: 25px;
       flex-wrap: wrap;
       justify-content: center;
 
@@ -240,31 +65,110 @@
       .service4,
       .service5,
       .service6 {
-        width: 300px;
-        height: 200px;
+        width: 200px;
+        border-radius: 10px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        min-height: 250px; 
+        position: relative;
+        background-color: white;
+        transition: all 0.3s ease;
 
+        &:hover {
+          transform: translateY(-10px);
+          box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
       
-        
+          // This will trigger the fill animation when hovering over the service card
+          .numbers-box::before {
+            transform: translateY(0);
+          }
+        }
+        .numbers-container {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          padding-bottom: 10px;
+          border-bottom: 1px solid #d6d4d49a;
+
+          .numbers-box {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            font-size: 1.2rem;
+            font-weight: bold;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 50px;
+            overflow: hidden;
+            z-index: 1;
+
+            &::before {
+              content: '';
+              position: absolute;
+              bottom: 0; // Start filling from the bottom
+              left: 0;
+              right: 0;
+              height: 100%; // Full height to cover the container
+              background: #28aa4a; 
+              transform: translateY(100%); // Start hidden below the container
+              transition: transform 0.6s ease; // Transition over 0.6 seconds
+              z-index: -1; 
+             
+          }
+          &:hover::before {
+            overflow: hidden;
+              transform: translateY(0); 
+             
+          }
+      
+          }
+
+          img {
+          
+            max-width: 140px;
+            padding-right: 60px;
+            height: auto;
+            padding-bottom: 20px;
+          }
+        }
 
         h1 {
-          font-size: 1.4rem;
-          text-align: center;
-        }
-
-        p {
+          padding-top: 10px;
           font-size: 1rem;
-          text-align: center;
-        }
+          font-weight: bold;
+          color: #333;
+          white-space: normal;
+          overflow: visible;
+          word-wrap: break-word;
+          }
+          p{
+            font-size: 1rem;
+            color: #9c9b9bf5;
+            margin-top: -5px;
+          }
+      }
+    }
+  }
 
-        .service-icon,
-        .service-second {
-          padding: 8px;
-          width: 25px;
+  @media (max-width: 950px) {
+    .whole-container {
+      .first-container {
+        .service1,
+        .service2,
+        .service3,
+        .service4,
+        .service5,
+        .service6 {
+          width: 100%;
         }
       }
     }
   }
-  
-
-
-
+}

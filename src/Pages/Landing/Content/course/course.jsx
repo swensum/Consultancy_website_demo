@@ -1,8 +1,8 @@
 import {  useState, useEffect } from 'react';
 import './course.scss';
-import photo2 from '/images/photo2.jpg';
-import photo4 from '/images/photo4.jpg';
-import photo5 from '/images/photo5.jpg';
+import photo2 from '/images/photos/photo2.jpg';
+import photo4 from '/images/photos/photo4.jpg';
+import photo5 from '/images/photos/photo5.jpg';
 
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

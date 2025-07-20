@@ -1,32 +1,47 @@
 .mission-container {
   display: flex;
   flex-direction: row;
-  width: 100%; 
-  min-height: auto; 
-  padding:  20px 0;
-  background-image: url('/images/photo6.jpg'); 
+  width: 88%; 
+  height: 650px; 
+  margin-left: 80px;
+  margin-bottom: 50px;
+  background-image: url('/images/photos/photo6.jpg'); 
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat;   
+  position: relative; // Add this for positioning the pseudo-element
   opacity: 0; // Initial state
   transition: opacity 2s ease;
- 
 
   &.fade-in {
     opacity: 1;
   }
 
+  // Pseudo-element for the blur effect
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); // Dark overlay to enhance text visibility
+    backdrop-filter: blur(5px); // Adjust the blur radius as needed
+    z-index: 1; // Ensure this is below the text
+  }
 
   .mission-left {
     position: relative;
     width: 110%;
-    
+    z-index: 2; // Ensure text is above the blur layer
+
     h1 {
       font-family: 'Space Grotesk', sans-serif;
-      color: #062f2b;
-      font-size: calc(1.7vw + 2rem);
+      color: white;
+      font-size: calc(1.7vw + 1.8rem);
       width: 90%;
       padding-left: 50px;
+      
       opacity: 0; // Initial state
       transform: translateY(-100%); // Slide in from below
       transition: opacity 0.5s ease, transform 1.5s ease; // Transition for both properties
@@ -35,13 +50,12 @@
         opacity: 1; // Fade in
         transform: translateY(0); // Move to original position
       }
-
     }
 
     .mission-text {
       position: relative;
       bottom: 20px;
-      background-color: #062f2b;
+      background-color: white;
       width: 60%;
       max-width: 210px;
       height: 50px;
@@ -52,9 +66,9 @@
       margin-left: 0;
       margin-right: 90%;
       span {
-        font-size: calc(1.2vw + 0.5rem);
+        font-size: calc(1.2vw + 0.4rem);
         font-family: 'Space Grotesk', sans-serif;
-        color: white;
+        color: #062f2b;
         opacity: 0; // Initial state
         transform: translateY(-100%); // Slide in from below
         transition: opacity 0.5s ease, transform 1.5s ease; // Transition for both properties
@@ -63,20 +77,17 @@
           opacity: 1; // Fade in
           transform: translateY(0); // Move to original position
         }
-  
       }
     }
-  
-      
 
     .first-part, .second-part, .third-part {
-      padding:20px 0 0 140px;
+      padding: 20px 0 0 140px;
       display: flex;
       width: 60%;
       flex-direction: row;
-     margin: 0;
-     position: relative;
-     bottom: 20px;
+      margin: 0;
+      position: relative;
+      bottom: 20px;
       gap: 30px;
       transition: transform 0.3s ease;
       &:hover {
@@ -87,12 +98,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #062f2b;
+        background-color: white;
         position: relative;
-        min-width: 20%;
+        min-width: 15%;
         max-height: 80px;
-        font-size: calc(1.2vw + 1.5rem);
-        color: white;
+        font-size: calc(1.2vw + 1.32rem);
+        color: #28aa4a;
       }
 
       .text-container {
@@ -103,7 +114,7 @@
         gap: 10px;
         .head {
           position: relative;
-          background-color: #062f2b;
+          background-color: white;
           width: 80%;
           max-width: 140px;
           height: 30px;
@@ -116,7 +127,7 @@
           margin-bottom: 20px;
           h2 {
             font-family: 'Space Grotesk', sans-serif;
-            color: white;
+            color: #062f2b;
             font-size: 1.7rem;
             opacity: 0; // Initial state
             transform: translateY(-100%); // Slide in from below
@@ -126,17 +137,15 @@
               opacity: 1; // Fade in
               transform: translateY(0); // Move to original position
             }
-      
           }
         }
 
         p {
           position: relative;
           bottom: 40px;
-
           font-size: calc(0.7vw + 0.5rem);
           font-family: 'Space Grotesk', sans-serif;
-          color: #062f2b;
+          color: white;
           opacity: 0; // Initial state
           transform: translateY(-100%); // Slide in from below
           transition: opacity 0.5s ease, transform 1.5s ease; // Transition for both properties
@@ -145,32 +154,30 @@
             opacity: 1; // Fade in
             transform: translateY(0); // Move to original position
           }
-    
         }
       }
     }
-.second-part{
-  position: relative;
-  bottom: 20px;
-}
-.third-part{
-  position: relative;
-  bottom: 30px;
-}
+
+    .second-part {
+      position: relative;
+      bottom: 20px;
+    }
+
+    .third-part {
+      position: relative;
+      bottom: 30px;
+    }
   }
   
   @media (max-width: 850px) {
     flex-direction: column;
-    .head{
-      p{
+    .head {
+      p {
         font-weight: bold;
       }
     }
-    .mission-left{
+    .mission-left {
       width: 98%;
     }
-  
-   
   }
-
 }
