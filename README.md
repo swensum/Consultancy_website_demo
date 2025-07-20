@@ -23,22 +23,22 @@ A professional and responsive **Consultancy Website** built with **React**, **SC
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="./screenshots/frontend10.jpg" alt="Screenshot 10" width="30%" style="margin: 0.5rem;" />
-  <img src="./screenshots/frontend9.jpg" alt="Screenshot 9" width="30%" style="margin: 0.5rem;" />
-  <img src="./screenshots/frontend8.jpg" alt="Screenshot 8" width="30%" style="margin: 0.5rem;" />
+  <img src="./screenshots/frontend10.png" alt="Screenshot 10" width="30%" style="margin: 0.5rem;" />
+  <img src="./screenshots/frontend9.png" alt="Screenshot 9" width="30%" style="margin: 0.5rem;" />
+  <img src="./screenshots/frontend8.png" alt="Screenshot 8" width="30%" style="margin: 0.5rem;" />
 </p>
 <p align="center">
-  <img src="./screenshots/frontend7.jpg" alt="Screenshot 7" width="30%" style="margin: 0.5rem;" />
-  <img src="./screenshots/frontend6.jpg" alt="Screenshot 6" width="30%" style="margin: 0.5rem;" />
-  <img src="./screenshots/frontend5.jpg" alt="Screenshot 5" width="30%" style="margin: 0.5rem;" />
+  <img src="./screenshots/frontend7.png" alt="Screenshot 7" width="30%" style="margin: 0.5rem;" />
+  <img src="./screenshots/frontend6.png" alt="Screenshot 6" width="30%" style="margin: 0.5rem;" />
+  <img src="./screenshots/frontend5.png" alt="Screenshot 5" width="30%" style="margin: 0.5rem;" />
 </p>
 <p align="center">
-  <img src="./screenshots/frontend4.jpg" alt="Screenshot 4" width="30%" style="margin: 0.5rem;" />
-  <img src="./screenshots/frontend3.jpg" alt="Screenshot 3" width="30%" style="margin: 0.5rem;" />
-  <img src="./screenshots/frontend2.jpg" alt="Screenshot 2" width="30%" style="margin: 0.5rem;" />
+  <img src="./screenshots/frontend4.png" alt="Screenshot 4" width="30%" style="margin: 0.5rem;" />
+  <img src="./screenshots/frontend3.png" alt="Screenshot 3" width="30%" style="margin: 0.5rem;" />
+  <img src="./screenshots/frontend2.png" alt="Screenshot 2" width="30%" style="margin: 0.5rem;" />
 </p>
 <p align="center">
-  <img src="./screenshots/frontend1.jpg" alt="Screenshot 1" width="30%" style="margin: 0.5rem;" />
+  <img src="./screenshots/frontend1.png" alt="Screenshot 1" width="30%" style="margin: 0.5rem;" />
 </p>
 
 
